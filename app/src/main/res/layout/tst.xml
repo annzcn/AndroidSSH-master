@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tbar_main_title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/darkblue"
+            android:popupTheme="@style/Theme.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TableLayout
+        android:padding="1dp"
+        android:id="@+id/table_main_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:stretchColumns="0,1">
+
+        <TableRow
+            android:orientation="horizontal"
+            android:paddingBottom="0.5dp"
+            android:paddingLeft="0.5dip"
+            android:paddingRight="0.5dip"
+            android:paddingTop="1dip">
+
+            <RadioButton
+                android:background="@color/cybergreen"
+                android:button="@null"
+                android:clickable="true"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text="@string/app_name">
+
+            </RadioButton>
+
+            <RadioButton
+                android:background="@color/cybergreen"
+                android:button="@null"
+                android:clickable="true"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text="@string/app_name">
+
+            </RadioButton>
+        </TableRow>
+
+        <TableRow
+            android:orientation="horizontal"
+            android:paddingLeft="0.5dip"
+            android:paddingRight="0.5dip"
+            android:paddingTop="1dip">
+
+            <RadioButton
+                android:background="@color/cybergreen"
+                android:button="@null"
+                android:clickable="true"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text="@string/app_name">
+
+            </RadioButton>
+
+            <RadioButton
+                android:background="@color/cybergreen"
+                android:button="@null"
+                android:clickable="true"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text="@string/app_name">
+
+            </RadioButton>
+        </TableRow>
+    </TableLayout>
+
+</android.support.design.widget.CoordinatorLayout>

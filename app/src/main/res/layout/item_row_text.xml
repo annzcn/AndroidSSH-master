@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/fry"
+              android:background="@color/eggshell"
+              android:maxHeight="@dimen/fry"
+              android:minHeight="@dimen/fry"
+              android:orientation="horizontal">
+
+    <cn.clickwise.views.VHTableScrollView
+        android:id="@+id/vh_routerlocal_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/liner_routerlocal_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </cn.clickwise.views.VHTableScrollView>
+
+</LinearLayout>

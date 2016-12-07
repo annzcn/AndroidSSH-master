@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:background="@color/almostblack"
+                tools:context="cn.clickwise.MainActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:id="@+id/inputlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/textviewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/username"/>
+
+        <EditText
+            android:text="@string/test_usename"
+            android:id="@+id/username"
+            style="@style/editTextStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:inputType="text"
+            android:textCursorDrawable="@null"/>
+
+        <TextView
+            style="@style/textviewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hostname"/>
+
+        <EditText
+            android:text="@string/test_hostname"
+            android:id="@+id/hostname"
+            style="@style/editTextStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:inputType="text"
+            android:textCursorDrawable="@null"/>
+
+        <TextView
+            style="@style/textviewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="port"/>
+
+        <EditText
+            android:id="@+id/portnum"
+            style="@style/editTextStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:inputType="number"
+            android:text="22"
+            android:textCursorDrawable="@null"/>
+
+        <TextView
+            style="@style/textviewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password"/>
+
+        <EditText
+            android:text="@string/test_pwd"
+            android:id="@+id/password"
+            style="@style/editTextStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:inputType="textPassword"
+            android:textCursorDrawable="@null"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_dialog_test"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="@string/test"/>
+
+            <Button
+                android:id="@+id/btn_dialog_exit"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="@string/exit"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

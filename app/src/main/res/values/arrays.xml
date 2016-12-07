@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fileType">
+        <item>txt</item>
+        <item>pdf</item>
+        <item>doc</item>
+        <item>docx</item>
+    </string-array>
+    <string-array name="command">
+        <item>ifconfig</item>
+    </string-array>
+    <string-array name="routeInfo">
+        <item>root</item>
+        <item>192.168.1.1</item>
+        <item>22</item>
+        <item>WifiAdx0penwrt</item>
+    </string-array>
+</resources>

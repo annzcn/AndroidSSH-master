@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--android:fitsSystemWindows="true"-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abar_route_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/firstlevel"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/coll_route_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:collapsedTitleGravity="center"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+            <!--android:background="@android:color/transparent"-->
+
+            <ImageView
+                android:id="@+id/img_route_toorbar"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/toorbarpic_no"
+                android:visibility="gone"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.8"/>
+
+            <cn.clickwise.views.ProgressView
+                android:id="@+id/pg_route_netspeed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                app:innerColor="@color/firstlevel"
+                app:outerColor="@color/progress_background"
+                app:progressColor="@color/progress_color"
+                app:radius="100dp"
+                app:scanfColor="@color/lightgray"
+                app:strokeWidth="10dp"
+                app:text=" "
+                app:textColor="@color/eggshell"
+                app:textSize="30dp"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tbar_main_title"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+    <!--@drawable/fbtn_bg-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fbtn_route_sign"
+        android:layout_width="@dimen/sy"
+        android:layout_height="@dimen/sy"
+        android:layout_marginRight="@dimen/te"
+        android:background="@drawable/fbtn_bg"
+        android:src="@mipmap/sign"
+        android:visibility="gone"
+        app:backgroundTint="@color/other_color"
+        app:borderWidth="0dp"
+        app:elevation="@dimen/five"
+        app:layout_anchor="@+id/abar_route_layout"
+        app:layout_anchorGravity="bottom|end|right"
+        app:pressedTranslationZ="@dimen/te"
+        app:rippleColor="@color/firstlevel"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/tv_route_offline"
+            android:textSize="@dimen/thy"
+            android:background="@color/eggshell"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:text="@string/searching_location"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="visible">
+
+        </TextView>
+
+
+        <TableLayout
+            android:id="@+id/table_route_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:paddingBottom="@dimen/span_line"
+            android:paddingEnd="@dimen/span_line"
+            android:paddingStart="@dimen/span_line"
+            android:paddingTop="@dimen/span_line"
+            android:stretchColumns="0,1,2"
+            >
+
+            <TableRow
+                android:id="@+id/tr_route_t1"
+                android:minHeight="@dimen/menuMinHeight"
+                android:paddingBottom="@dimen/span_line"
+                android:paddingLeft="@dimen/span_line"
+                android:paddingRight="@dimen/span_line"
+                android:paddingTop="@dimen/span_line">
+
+                <RadioButton
+                    android:id="@+id/rbtn_route_diagnose"
+                    style="@style/radioButtonStyleTable"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginRight="@dimen/span_line"
+                    android:drawableTop="@mipmap/diagnose_title_72"
+                    android:text="@string/diagnose">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rbtn_route_share"
+                    style="@style/radioButtonStyleTable"
+                    android:drawableTop="@mipmap/share_title2_72"
+                    android:text="@string/share">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rbtn_route_map"
+                    style="@style/radioButtonStyleTable"
+                    android:layout_marginLeft="@dimen/span_line"
+                    android:drawableTop="@mipmap/map_72"
+                    android:text="@string/route_map">
+
+                </RadioButton>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr_route_t2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/span_line"
+                android:paddingRight="@dimen/span_line">
+
+
+                <RadioButton
+                    android:id="@+id/rbtn_route_wechat"
+                    style="@style/radioButtonStyleTable"
+                    android:layout_marginRight="@dimen/span_line"
+                    android:drawableTop="@mipmap/wechat_tilte_72"
+                    android:text="@string/wechat">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rbtn_route_phone"
+                    style="@style/radioButtonStyleTable"
+                    android:drawableTop="@mipmap/web_login_72"
+                    android:text="@string/router_login">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rbtn_route_speedtest"
+                    style="@style/radioButtonStyleTable"
+                    android:layout_marginLeft="@dimen/span_line"
+                    android:drawableTop="@mipmap/speedtest_72"
+                    android:text="@string/speedtest">
+
+                </RadioButton>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

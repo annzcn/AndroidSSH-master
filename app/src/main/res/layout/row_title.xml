@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/lightgray"
+              android:minHeight="?actionBarSize"
+              android:orientation="vertical">
+    <!--android:background="@drawable/bg_edittext_normal_title"-->
+    <TextView
+        android:id="@+id/tv_rowtitle_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:enabled="false"
+        android:gravity="center"
+        android:maxLines="1"
+        android:maxWidth="@dimen/et"
+        android:minWidth="@dimen/et"
+        android:singleLine="true"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

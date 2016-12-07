@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.clickwise.ui.SignActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbar_sign_act_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/frame_sign_act_group"
+        android:layout_below="@+id/tbar_sign_act_title"
+        android:layout_above="@+id/rgro_sign_act_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+    <RadioGroup
+        android:id="@+id/rgro_sign_act_menu"
+        android:orientation="horizontal"
+        android:background="@color/gray"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rbtn_sign_act_sign"
+            android:clickable="true"
+            android:button="@null"
+            android:textColor="@color/gray_sign_menu"
+            android:text="@string/sign_today"
+            android:gravity="center"
+            android:drawableTop="@drawable/sign_sign_32"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rbtn_sign_act_trace"
+            android:clickable="true"
+            android:button="@null"
+            android:textColor="@color/gray_sign_menu"
+            android:text="@string/his_trace"
+            android:gravity="center"
+            android:drawableTop="@drawable/sign_trace_32"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+</RelativeLayout>

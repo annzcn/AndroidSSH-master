@@ -1,0 +1,157 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/almostblack">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tbar_main_title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/darkblue"
+            android:popupTheme="@style/Theme.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fbtn_main_trunwx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:src="@drawable/ssdk_oks_classic_wechat"
+        app:layout_anchor="@+id/fbtn_main_share"
+        app:layout_anchorGravity="bottom|right"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fbtn_main_truntp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:src="@drawable/ssdk_oks_classic_whatsapp"
+        app:layout_anchor="@+id/fbtn_main_trunwx"
+        app:layout_anchorGravity="bottom|right"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fbtn_main_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        app:layout_anchor="@+id/rela_main_show"
+        app:layout_anchorGravity="end"
+        android:layout_margin="@dimen/te"
+        android:clickable="true"
+        android:src="@mipmap/share"/>
+
+    <RelativeLayout
+        android:id="@+id/rela_main_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:id="@+id/linear_main_command"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sshtext"
+                style="@style/textviewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_prompt"
+                android:textSize="@dimen/ty"/>
+
+            <TextView
+                android:id="@+id/tv_main_choose"
+                style="@style/textviewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="@string/choose"
+                android:textColor="@color/red"
+                android:textSize="@dimen/ty"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scro_main_sro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/linear_main_command"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <cn.clickwise.views.SshEditText
+                    android:id="@+id/command"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/almostblack"
+                    android:gravity="top|left"
+                    android:imeOptions="actionGo"
+                    android:inputType="textMultiLine"
+                    android:minLines="10"
+                    android:singleLine="true"
+                    android:textColor="@color/cybergreen"
+                    android:textColorHint="@color/red"
+                    android:textCursorDrawable="@null"/>
+
+                <!--<Button
+                    android:id="@+id/sftpbutton"
+                    style="@style/buttonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filetransfer"/>-->
+
+            </LinearLayout>
+        </ScrollView>
+        <!--android:layout_alignParentBottom="true"-->
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/blue"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbtn_main_connrouter"
+                style="@style/radioButtonStyle"
+                android:drawableTop="@mipmap/wifi_rounter_48"
+                android:text="@string/connect_router"/>
+
+            <RadioButton
+                android:id="@+id/rbtn_main_closerouter"
+                style="@style/radioButtonStyle"
+                android:drawableTop="@mipmap/close_rounter_48"
+                android:text="@string/close_router"/>
+
+            <RadioButton
+                android:id="@+id/rbtn_main_savelog"
+                style="@style/radioButtonStyle"
+                android:drawableTop="@mipmap/savelog_48"
+                android:text="@string/operation_explain"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

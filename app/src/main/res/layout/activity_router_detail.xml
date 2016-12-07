@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abar_routerdetail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tbar_router_title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <cn.clickwise.views.VHTableScrollView
+        android:background="@color/lightgray"
+        android:layout_below="@+id/abar_routerdetail_layout"
+        android:id="@+id/vh_routerlocal_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fry"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/linear_routerlocal_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </cn.clickwise.views.VHTableScrollView>
+
+    <ListView
+        android:id="@+id/lv_router_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vh_routerlocal_scroll"
+        android:layout_gravity="center_horizontal"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+    </ListView>
+
+</RelativeLayout>

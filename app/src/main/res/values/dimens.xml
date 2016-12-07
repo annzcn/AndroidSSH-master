@@ -1,0 +1,23 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="dialog_basic_width">500dp</dimen>
+    <dimen name="dialog_basic_height">800dp</dimen>
+    <dimen name="padding">3dp</dimen>
+    <dimen name="layout_margin">5dp</dimen>
+    <dimen name="te">10dp</dimen>
+    <dimen name="fh">15dp</dimen>
+    <dimen name="fy">50dp</dimen>
+    <dimen name="sy">60dp</dimen>
+    <dimen name="sey">70dp</dimen>
+    <dimen name="eit">80dp</dimen>
+    <dimen name="et">110dp</dimen>
+    <dimen name="fry">40dp</dimen>
+    <dimen name="five">5dp</dimen>
+    <dimen name="ty">20dp</dimen>
+    <dimen name="tfh">25dp</dimen>
+    <dimen name="thy">30dp</dimen>
+    <dimen name="menuMinHeight">100dp</dimen>
+    <dimen name="span_line">0.5dp</dimen>
+</resources>
